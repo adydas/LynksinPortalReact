@@ -7,4 +7,8 @@
      NOT_FOUND: '/404',
      LOGIN: '/login',
      REGISTER: '/register',
+     CLUBS: '/clubs',
+     MATCHES: '/matches',
+     PLAYERS: '/players',
+     SHOP: '/shop',
  }
