@@ -23,7 +23,7 @@ const Header = () => {
             <ul className="navbar-nav mr-auto">
               {
                 MENUS.map((x, index) => (
-                  <li className={`nav-item ${item === index ? 'active' : ''}`}>
+                  <li className={`nav-item ${item === index ? 'active' : ''}`} key={index}>
                     <Link className="nav-link" to={x} onClick={() => setItem(index)}>{x.slice(1).toUpperCase()}</Link>
                   </li>
                 ))

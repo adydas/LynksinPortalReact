@@ -11,4 +11,10 @@
      MATCHES: '/matches',
      PLAYERS: '/players',
      SHOP: '/shop',
+
+     PROFILE: '/profile',
+     LEEADERBOARD: {
+         STATS: '/leaderboard/stats',
+     },
+     PORTALHOME: '/portalhome',
  }
