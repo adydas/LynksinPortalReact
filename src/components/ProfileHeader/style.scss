@@ -41,8 +41,12 @@
     }
   }
 
-  &-row > * {
-    margin-top: 2rem;
+  &-row {
+    margin-right: 0 !important;
+    
+    & > * {
+      margin-top: 2rem;
+    }
   }
 
   @media (max-width: 767.98px) {
