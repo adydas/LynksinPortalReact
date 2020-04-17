@@ -3,31 +3,6 @@
     font-size: 36px;
     color: black;
     font-weight: normal;
-  }
-
-  &-table {
-    width: 100%;
-
-    &-header {
-    }
-
-    &-data {
-    }
-
-    tr {
-      height: 50px;
-    }
-
-    td,
-    th {
-      border: 1px solid #e6e6e6;
-      text-align: center;
-    }
-
-    th {
-      text-transform: uppercase;
-      font-weight: 900;
-      font-size: 14px;
-    }
+    margin-left: 0.5rem;
   }
 }
