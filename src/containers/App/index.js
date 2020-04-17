@@ -1,16 +1,14 @@
 import React from 'react';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
-import { withRouter } from 'react-router';
 import { INTERNAL_LINKS } from '../../enum';
 
 import { Header } from '../../components';
 import ProfilePage from '../../pages/Profile';
+import { LeaderboardStats } from '../../pages/Leaderboard';
 import './style.scss'
 
 class App extends React.Component {
@@ -31,6 +29,7 @@ class App extends React.Component {
             />
             <Route
               path={INTERNAL_LINKS.LEEADERBOARD.STATS}
+              component={LeaderboardStats}
             />
             <Route
               path={INTERNAL_LINKS.PORTALHOME}
