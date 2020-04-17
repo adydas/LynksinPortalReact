@@ -45,6 +45,7 @@ const CustomTable = ({ title, data }) => {
             headerStyle,
             style: cellStyle,
             width: 90,
+            Footer: () => 'AVERAGE'
           },
           {
             Header: 'LEADER',
@@ -62,15 +63,30 @@ const CustomTable = ({ title, data }) => {
             headerStyle,
             style: cellStyle,
             width: 115,
+            Footer: info => {
+              console.log('#$%: info = ', info)
+              const total = React.useMemo(
+                () => info.data.reduce((sum, row) => row.events + sum, 0),
+                [info.data]
+              )
+              return <>{Math.floor(total/info.data.length)}</>
+            }
           },
           {
             Header: 'POINTS',
             id: 'points',
-            accessor: 'points',
+            accessor: d => new Intl.NumberFormat('ja-JP').format(get(d, 'points')),
             filterable: false,
             headerStyle,
             style: cellStyle,
             width: 120,
+            Footer: info => {
+              const total = React.useMemo(
+                () => info.data.reduce((sum, row) => parseInt(row.points.replace(',', '')) + sum, 0),
+                [info.data]
+              )
+              return <>{(total/info.data.length).toFixed(3)}</>
+            }
           },
         ]}
         manual // Forces table not to paginate or sort automatically, so we can handle it server-side
