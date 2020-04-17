@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Badge from '../Badge';
 import CustomRadioButton from '../CustomRadioButton';
 
@@ -12,10 +12,10 @@ const ProfileInfo = ({ data }) => {
 
   return (
     <div className="profile-information">
-      <div className="row">
+      <div className="row w-100">
         {
-          Object.values(data).map(side => (
-            <div className="col-6">
+          Object.values(data).map((side, sid) => (
+            <div className="col-sm-12 col-md-6" key={sid}>
               {
                 side.map((item, index) => (
                   <div className="badge-item" key={index}>
