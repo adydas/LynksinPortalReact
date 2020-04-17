@@ -1,8 +1,24 @@
 .custom-table {
+  .ReactTable {
+    max-height: calc(100vh - 300px);
+  }
+
   h1 {
     font-size: 36px;
     color: black;
     font-weight: normal;
     margin-left: 0.5rem;
+  }
+
+  &-seeall {
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {
+      font-weight: 300;
+      font-size: 13px;
+      margin-right: 0.25rem;
+    }
   }
 }

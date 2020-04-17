@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Table from '../Table';
 import { get } from 'lodash-es';
 
@@ -30,6 +30,13 @@ const CustomTable = ({ title, data }) => {
     justifyContent: 'flex-start',
     paddingLeft: '25px',
     color: '#003c7a'
+  }
+
+  const [seeAll, setSeeAll] = useState(false)
+  const MIN_RECORD_COUNT = 5
+  
+  const show = () => {
+    setSeeAll(!seeAll)
   }
 
   return (
@@ -69,7 +76,7 @@ const CustomTable = ({ title, data }) => {
                 () => info.data.reduce((sum, row) => row.events + sum, 0),
                 [info.data]
               )
-              return <>{Math.floor(total/info.data.length)}</>
+              return <>{Math.floor(total / info.data.length)}</>
             }
           },
           {
@@ -85,15 +92,21 @@ const CustomTable = ({ title, data }) => {
                 () => info.data.reduce((sum, row) => parseInt(row.points.replace(',', '')) + sum, 0),
                 [info.data]
               )
-              return <>{(total/info.data.length).toFixed(3)}</>
+              return <>{(total / info.data.length).toFixed(3)}</>
             }
           },
         ]}
         manual // Forces table not to paginate or sort automatically, so we can handle it server-side
-        data={data.slice(1)}
+        data={seeAll ? data.slice(1) : data.slice(1, MIN_RECORD_COUNT + 1)}
         className="-striped -highlight mb-10"
         showPagination={false}
       />
+      <div className="d-flex justify-content-end mt-4">
+        <button className="custom-table-seeall btn btn-link" type="button" onClick={() => show()}>
+          <i className="fa fa-chevron-right"></i>
+          {seeAll ? 'SEE LESS' : 'SEE ALL'}
+        </button>
+      </div>
     </div>
   )
 }
