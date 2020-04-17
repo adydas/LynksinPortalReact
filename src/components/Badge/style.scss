@@ -1,0 +1,20 @@
+.custom-badge {
+  background-color: #ffaa50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  border-radius: 21px;
+  margin: 0.5rem 0.25rem;
+  cursor: pointer;
+  
+  &-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

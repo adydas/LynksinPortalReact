@@ -1,0 +1,20 @@
+.profile-information {
+  background-color: #3c4c3d;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .badge-item {
+    flex: 50%;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    h1 {
+      color: #ffb552;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
