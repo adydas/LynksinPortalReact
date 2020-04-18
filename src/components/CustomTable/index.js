@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Table from '../Table';
 import { get } from 'lodash-es';
 
+import StateModal from '../StateModal';
 import './style.scss';
 
 const CustomTable = ({ title, data }) => {
@@ -33,10 +34,22 @@ const CustomTable = ({ title, data }) => {
   }
 
   const [seeAll, setSeeAll] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalProps, setModalProps] = useState(null)
   const MIN_RECORD_COUNT = 5
-  
+
   const show = () => {
     setSeeAll(!seeAll)
+  }
+
+  const showModal = (event, data) => {
+    console.log('#$%: event = ', event)
+    setModalProps(data)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
   }
 
   return (
@@ -57,7 +70,11 @@ const CustomTable = ({ title, data }) => {
           {
             Header: 'LEADER',
             id: 'leader',
-            accessor: 'leader',
+            accessor: d => (
+              <div className="custom-table-leader" onClick={event => showModal(event, d)}>
+                {get(d, 'leader')}
+              </div>
+            ),
             filterable: false,
             headerStyle,
             style: { ...cellStyle, ...leaderStyle },
@@ -71,7 +88,6 @@ const CustomTable = ({ title, data }) => {
             style: cellStyle,
             width: 115,
             Footer: info => {
-              console.log('#$%: info = ', info)
               const total = React.useMemo(
                 () => info.data.reduce((sum, row) => row.events + sum, 0),
                 [info.data]
@@ -107,6 +123,7 @@ const CustomTable = ({ title, data }) => {
           {seeAll ? 'SEE LESS' : 'SEE ALL'}
         </button>
       </div>
+      <StateModal open={modalOpen} data={modalProps} handleClose={closeModal}/>
     </div>
   )
 }

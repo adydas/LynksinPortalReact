@@ -3,6 +3,10 @@
     max-height: calc(100vh - 300px);
   }
 
+  &-leader {
+    cursor: pointer;
+  }
+
   h1 {
     font-size: 36px;
     color: black;
