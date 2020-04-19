@@ -9,6 +9,7 @@ import { INTERNAL_LINKS } from '../../enum';
 import { Header } from '../../components';
 import ProfilePage from '../../pages/Profile';
 import { LeaderboardStats } from '../../pages/Leaderboard';
+import PortalHome from '../../pages/PortalHome';
 import './style.scss'
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
             />
             <Route
               path={INTERNAL_LINKS.PORTALHOME}
+              component={PortalHome}
             />
           </Switch>
         </Router>
