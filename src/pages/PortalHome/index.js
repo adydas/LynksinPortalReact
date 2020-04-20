@@ -2,6 +2,7 @@ import React from 'react';
 
 import { MemberSimple, MemberDetail } from '../../components/Member';
 import { ImageGallery } from '../../components';
+import Shop from '../../containers/Shop';
 
 import './style.scss';
 import VideoPoster from '../../images/img-video.png';
@@ -244,7 +245,9 @@ const PortalHome = () => {
                 <div className="col-4">
                   <ImageGallery />
                 </div>
-                <div className="col-4"></div>
+                <div className="col-4">
+                  <Shop />
+                </div>
               </div>
             </div>
           </div>
