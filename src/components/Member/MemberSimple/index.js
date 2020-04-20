@@ -2,7 +2,11 @@ import React from 'react';
 
 import './style.scss';
 
-const MemberSimple = ({ img, name, location, handicapIndex }) => {
+const MemberSimple = ({ data }) => {
+
+  const { img, name, handicapIndex, general } = data;
+  let location = general.find(x => x.label === 'Location')
+  location = location ? location.value : 'N/A';
 
   return (
     <div className="member-simple">
@@ -13,7 +17,7 @@ const MemberSimple = ({ img, name, location, handicapIndex }) => {
       </div>
       <div className="member-simple-right">
         <h4>{name}</h4>
-        <div><i class="fa fa-map-marker" aria-hidden="true"></i><span>{location}</span></div>
+        <div><i className="fa fa-map-marker" aria-hidden="true"></i><span>{location}</span></div>
           <h6>Handicap Index <span>{handicapIndex}</span></h6>
       </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MemberSimple } from '../../components/Member';
+import { MemberSimple, MemberDetail } from '../../components/Member';
 
 import './style.scss';
 import VideoPoster from '../../images/img-video.png';
@@ -20,61 +20,171 @@ const PortalHome = () => {
       name: 'Kevin Karo',
       img: 'images/members/member-1.png',
       professionalName: 'Featured Golfer: Kevin K',
-      location: 'Hingham, MA',
-      email: 'kevinjkaro@bpsma.org',
-      mobile: '781-424-5393',
       handicapIndex: '8.2',
-      professional: {
-        college: 'St. Edwards University, Austin, TX',
-      }
+      general: [
+        {
+          label: 'Date of birth',
+          value: '09 May',
+          icon: 'fa fa-gift',
+        },
+        {
+          label: 'Location',
+          value: 'Hingham, MA',
+          icon: 'fa fa-map-marker',
+        },
+        {
+          label: 'Email',
+          value: 'kevinjkaro@bpsma.org',
+          icon: 'fa fa-bullseye',
+        },
+        {
+          label: 'Mobile',
+          value: '781-424-5393',
+          icon: 'fa fa-mobile',
+        },
+      ],
+      professional: [
+        {
+          label: 'College',
+          value: 'St. Edwards University, Austin, TX',
+        },
+      ]
     },
     {
       name: 'Matt Gregory',
       img: 'images/members/member-2.png',
-      professionalName: 'Featured Golfer: Kevin ',
-      location: '320 Thacher St., Milton, MA 02186, MA',
-      email: 'kevinjkaro@bpsma.org',
-      mobile: '781-424-5393',
+      professionalName: 'Featured Golfer: Matt G',
       handicapIndex: '2.8',
-      professional: {
-        college: 'St. Edwards University, Austin, TX',
-      }
+      general: [
+        {
+          label: 'Date of birth',
+          value: '09 May',
+          icon: 'fa fa-gift',
+        },
+        {
+          label: 'Location',
+          value: '320 Thacher St., Milton, MA 02186, MA',
+          icon: 'fa fa-map-marker',
+        },
+        {
+          label: 'Email',
+          value: 'kevinjkaro@bpsma.org',
+          icon: 'fa fa-bullseye',
+        },
+        {
+          label: 'Mobile',
+          value: '781-424-5393',
+          icon: 'fa fa-mobile',
+        },
+      ],
+      professional: [
+        {
+          label: 'College',
+          value: 'St. Edwards University, Austin, TX',
+        },
+      ]
     },
     {
       name: 'Matt Parziale',
       img: 'images/members/member-3.png',
-      professionalName: 'Featured Golfer: Kevin K',
-      location: 'N/A',
-      email: 'kevinjkaro@bpsma.org',
-      mobile: '781-424-5393',
+      professionalName: 'Featured Golfer: Matt P',
       handicapIndex: 'N/A',
-      professional: {
-        college: 'St. Edwards University, Austin, TX',
-      }
-    },
-    {
-      name: 'Matt Gregory',
-      img: 'images/members/member-2.png',
-      professionalName: 'Featured Golfer: Kevin ',
-      location: 'Hingham, MA',
-      email: 'kevinjkaro@bpsma.org',
-      mobile: '781-424-5393',
-      handicapIndex: '2.8',
-      professional: {
-        college: 'St. Edwards University, Austin, TX',
-      }
+      general: [
+        {
+          label: 'Date of birth',
+          value: '09 May',
+          icon: 'fa fa-gift',
+        },
+        {
+          label: 'Location',
+          value: 'N/A',
+          icon: 'fa fa-map-marker',
+        },
+        {
+          label: 'Email',
+          value: 'kevinjkaro@bpsma.org',
+          icon: 'fa fa-bullseye',
+        },
+        {
+          label: 'Mobile',
+          value: '781-424-5393',
+          icon: 'fa fa-mobile',
+        },
+      ],
+      professional: [
+        {
+          label: 'College',
+          value: 'St. Edwards University, Austin, TX',
+        },
+      ]
     },
     {
       name: 'Kevin Karo',
-      img: 'images/members/member-3.png',
+      img: 'images/members/member-1.png',
       professionalName: 'Featured Golfer: Kevin K',
-      location: 'Hingham, MA',
-      email: 'kevinjkaro@bpsma.org',
-      mobile: '781-424-5393',
       handicapIndex: '8.2',
-      professional: {
-        college: 'St. Edwards University, Austin, TX',
-      }
+      general: [
+        {
+          label: 'Date of birth',
+          value: '09 May',
+          icon: 'fa fa-gift',
+        },
+        {
+          label: 'Location',
+          value: 'Hingham, MA',
+          icon: 'fa fa-map-marker',
+        },
+        {
+          label: 'Email',
+          value: 'kevinjkaro@bpsma.org',
+          icon: 'fa fa-bullseye',
+        },
+        {
+          label: 'Mobile',
+          value: '781-424-5393',
+          icon: 'fa fa-mobile',
+        },
+      ],
+      professional: [
+        {
+          label: 'College',
+          value: 'St. Edwards University, Austin, TX',
+        },
+      ]
+    },
+    {
+      name: 'Kevin Karo',
+      img: 'images/members/member-1.png',
+      professionalName: 'Featured Golfer: Kevin K',
+      handicapIndex: '8.2',
+      general: [
+        {
+          label: 'Date of birth',
+          value: '09 May',
+          icon: 'fa fa-gift',
+        },
+        {
+          label: 'Location',
+          value: 'Hingham, MA',
+          icon: 'fa fa-map-marker',
+        },
+        {
+          label: 'Email',
+          value: 'kevinjkaro@bpsma.org',
+          icon: 'fa fa-bullseye',
+        },
+        {
+          label: 'Mobile',
+          value: '781-424-5393',
+          icon: 'fa fa-mobile',
+        },
+      ],
+      professional: [
+        {
+          label: 'College',
+          value: 'St. Edwards University, Austin, TX',
+        },
+      ]
     },
   ]
 
@@ -121,13 +231,15 @@ const PortalHome = () => {
                       <span>New members</span>
                     </div>
                     {
-                      members.map(({ img, name, location, handicapIndex }, index) =>
-                        <MemberSimple img={img} name={name} location={location} handicapIndex={handicapIndex} key={index} />
+                      members.map((member, index) =>
+                        <MemberSimple data={member} key={index} />
                       )
                     }
                   </div>
                 </div>
-                <div className="col-4"></div>
+                <div className="col-4">
+                  <MemberDetail data={members[0]} />
+                </div>
                 <div className="col-4"></div>
                 <div className="col-4"></div>
               </div>
