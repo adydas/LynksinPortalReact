@@ -7,3 +7,4 @@ export { default as Table } from './Table';
 export { default as StateModal } from './StateModal';
 export { default as ImageGallery } from './ImageGallery';
 export { default as Product } from './Product';
+export { default as Club } from './Club';

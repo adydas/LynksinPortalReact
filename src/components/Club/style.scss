@@ -1,0 +1,54 @@
+.club {
+  background-color: #3f4b3d;
+
+  &-image {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-content {
+    display: flex;
+    color: #fea946;
+    height: 3rem;
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 1.5rem;
+      flex-grow: 1;
+
+      &-name {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 0;
+        margin-bottom: 6px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &-location {
+        font-size: 10px;
+        font-weight: normal;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 27px;
+    }
+  }
+}
