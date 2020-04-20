@@ -211,7 +211,7 @@ const PortalHome = () => {
         <div className="portal-home-header-list">
           <ul>
             {nameList.map((name, index) => (
-              <li key={index}>{name}</li>
+              <li key={index}>{`${index+1} ${name}`}</li>
             ))}
           </ul>
         </div>
@@ -221,13 +221,13 @@ const PortalHome = () => {
       </div>
       <div className="portal-home-container">
         <div className="row portal-home-container-row">
-          <div className="col-9">
+          <div className="col-md-12 col-lg-9">
             <div className="portal-home-container-left">
               <div className="row">
-                <div className="col-8">
+                <div className="col-lg-12 col-xl-8">
                   <video src="movie.mp4" type="video/mp4" poster={VideoPoster} controls />
                 </div>
-                <div className="col-4">
+                <div className="col-md-6 col-lg-6 col-xl-4">
                   <div className="portal-home-new-members">
                     <div className="portal-home-new-members-title">
                       <span>New members</span>
@@ -239,19 +239,19 @@ const PortalHome = () => {
                     }
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-md-6 col-lg-6 col-xl-4">
                   <MemberDetail data={members[0]} />
                 </div>
-                <div className="col-4">
+                <div className="col-md-6 col-lg-6 col-xl-4">
                   <ImageGallery />
                 </div>
-                <div className="col-4">
+                <div className="col-md-6 col-lg-6 col-xl-4">
                   <Shop />
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-md-12 col-lg-3">
             <div className="right-container">
               <ClubList />
             </div>

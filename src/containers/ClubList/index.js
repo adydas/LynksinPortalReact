@@ -36,11 +36,13 @@ const ClubList = () => {
       <div className='club-list-title'>
         <span>Our Clubs</span>
       </div>
-      {
-        clubList.map(({ img, name, location }, index) =>
-          <Club className='club-list-item' img={img} name={name} location={location} key={index} />
-        )
-      }
+      <div className="club-list-content">
+        {
+          clubList.map(({ img, name, location }, index) =>
+            <Club className='club-list-item' img={img} name={name} location={location} key={index} />
+          )
+        }
+      </div>
     </div>
   )
 }

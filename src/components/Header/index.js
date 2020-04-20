@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="lynksin-header">
       <nav className="navbar navbar-expand-md navbar-light">
-        <a className="navbar-brand" href={INTERNAL_LINKS.HOME}>
+        <a className="navbar-brand  mr-2" href={INTERNAL_LINKS.HOME}>
           <img src={Logo} alt="logo" />
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTarget" aria-controls="navbarTarget" aria-expanded="false" aria-label="Toggle navigation">

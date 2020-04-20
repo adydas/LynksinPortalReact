@@ -1,6 +1,7 @@
 .club-list {
   background-color: #262d25;
   margin-top: 0.25rem;
+  overflow: hidden;
 
   &-title {
     padding: 0.5rem;
@@ -12,5 +13,10 @@
 
   &-item {
     margin-bottom: 27px;
+  }
+
+  &-content {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
