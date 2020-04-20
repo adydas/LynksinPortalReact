@@ -5,3 +5,4 @@ export { default as CustomRadioButton } from './CustomRadioButton';
 export { default as CustomTable } from './CustomTable';
 export { default as Table } from './Table';
 export { default as StateModal } from './StateModal';
+export { default as ImageGallery } from './ImageGallery';

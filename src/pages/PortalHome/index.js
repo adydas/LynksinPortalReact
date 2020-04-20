@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { MemberSimple, MemberDetail } from '../../components/Member';
+import { ImageGallery } from '../../components';
 
 import './style.scss';
 import VideoPoster from '../../images/img-video.png';
@@ -240,7 +241,9 @@ const PortalHome = () => {
                 <div className="col-4">
                   <MemberDetail data={members[0]} />
                 </div>
-                <div className="col-4"></div>
+                <div className="col-4">
+                  <ImageGallery />
+                </div>
                 <div className="col-4"></div>
               </div>
             </div>
