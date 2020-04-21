@@ -13,7 +13,7 @@
 
   &-item {
     margin-bottom: 27px;
-    
+
     @media (max-width: 991.98px) {
       margin-bottom: 0;
       display: grid;
@@ -22,6 +22,10 @@
       &:last-child {
         margin-bottom: 1rem;
       }
+    }
+
+    @media (max-width: 664.98px) {
+      margin-bottom: 27px;
     }
   }
 
@@ -32,6 +36,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
+    }
+
+    @media (max-width: 664.98px) {
+      display: block;
     }
   }
 }
