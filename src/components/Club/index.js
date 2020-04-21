@@ -14,7 +14,7 @@ const Club = ({ className, img, name, location }) => {
           <h5 className='club-content-left-location'>{location}</h5>
         </div>
         <div className='club-content-right'>
-          <i class="fa fa-heart-o" aria-hidden="true"></i>
+          <i className="fa fa-heart-o" aria-hidden="true"></i>
         </div>
       </div>
     </div>

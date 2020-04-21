@@ -72,14 +72,19 @@
     }
 
     &-action {
-      font-size: 18px;
-      color: #3c4c3c;
-      font-weight: normal;
       padding: 0 1.5rem;
       order: 3;
-
-      span {
+      
+      &-btn {
         cursor: pointer;
+        font-size: 18px;
+        color: #3c4c3c;
+        font-weight: normal;
+
+        &:hover {
+          color: #3c4c3c;
+          text-decoration: none;
+        }
       }
 
       @media (max-width: 1259.98px) {

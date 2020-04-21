@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import { MemberSimple, MemberDetail } from '../../components/Member';
 import { ImageGallery } from '../../components';
 import { Shop, ClubList } from '../../containers';
-
+import { INTERNAL_LINKS } from '../../enum';
 import './style.scss';
 import VideoPoster from '../../images/img-video.png';
 
+function debounce(fn, ms) {
+  let timer
+  return _ => {
+    clearTimeout(timer)
+    timer = setTimeout(_ => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  };
+}
 
 const PortalHome = () => {
 
@@ -190,6 +201,33 @@ const PortalHome = () => {
     },
   ]
 
+  useEffect(() => {
+    const video = document.querySelector('#video');
+    const memberList = document.querySelector('.portal-home-new-members');
+
+    const setNewMembersWidth = () => {
+      if (window.innerWidth > 1200) {
+        const height = video.offsetHeight;
+        memberList.style.height = `${height}px`;
+      } else {
+        memberList.style.maxHeight = '700px';
+        memberList.style.height = '100%';
+      }
+    }
+
+    setNewMembersWidth();
+
+    const debouncedHandleResize = debounce(function handleResize() {
+      setNewMembersWidth();
+    }, 100)
+
+    window.addEventListener('resize', debouncedHandleResize)
+
+    return _ => {
+      window.removeEventListener('resize', debouncedHandleResize)
+    }
+  })
+
   return (
     <div className="portal-home">
       <div className="portal-home-header">
@@ -211,12 +249,12 @@ const PortalHome = () => {
         <div className="portal-home-header-list">
           <ul>
             {nameList.map((name, index) => (
-              <li key={index}>{`${index+1} ${name}`}</li>
+              <li key={index}>{`${index + 1} ${name}`}</li>
             ))}
           </ul>
         </div>
         <div className="portal-home-header-action">
-          <span>View Leaderboard</span>
+          <Link to={INTERNAL_LINKS.LEEADERBOARD.STATS} className="portal-home-header-action-btn">View Leaderboard</Link>
         </div>
       </div>
       <div className="portal-home-container">
@@ -225,7 +263,7 @@ const PortalHome = () => {
             <div className="portal-home-container-left">
               <div className="row">
                 <div className="col-lg-12 col-xl-8">
-                  <video src="movie.mp4" type="video/mp4" poster={VideoPoster} controls />
+                  <video id='video' src="movie.mp4" type="video/mp4" poster={VideoPoster} controls />
                 </div>
                 <div className="col-md-6 col-lg-6 col-xl-4">
                   <div className="portal-home-new-members">

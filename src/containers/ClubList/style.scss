@@ -13,10 +13,25 @@
 
   &-item {
     margin-bottom: 27px;
+    
+    @media (max-width: 991.98px) {
+      margin-bottom: 0;
+      display: grid;
+      grid-template-rows: auto 3rem;
+
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   &-content {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: block;
+
+    @media (max-width: 991.98px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
   }
 }
