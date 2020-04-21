@@ -85,6 +85,10 @@
           color: #3c4c3c;
           text-decoration: none;
         }
+
+        @media (max-width: 399.98px) {
+          font-size: 16px;
+        }
       }
 
       @media (max-width: 1259.98px) {
